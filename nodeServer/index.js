@@ -55,7 +55,7 @@ io.on("connection", (socket) => {
 });
 
 // Use Render-assigned port or 8000 locally
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 10000;
 http.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
