@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IChat</title>
+    <link rel="icon" type="image/png" href="/assets/logo1.png">
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="js/client.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white w-[500px] h-[500px] rounded-2xl shadow-lg flex flex-col border border-gray-300">
+        
+        
+        <!-- Header -->
+        <div class="flex items-center justify-center h-14 border-b border-gray-300 rounded-t-2xl relative">
+            <div class="flex items-center space-x-2">
+                <img src="/assets/logo1.png" alt="Logo" class="w-6 h-6 rounded" />
+                <span class="font-handwriting text-xl">IChat</span>
+                
+            </div>
+        </div>
+        
+        
+
+
+        <!-- Chat area -->
+        <div class="flex-1 p-4 overflow-y-auto">
+            <div class="container flex-1 p-4 overflow-y-auto space-y-3">
+                <!-- Messages will be appended here by JS -->
+            </div>
+        </div>
+        <!-- Input area -->
+        <form action="#" id="send-container">
+            <div class="flex items-center p-4 border-t border-gray-300 rounded-b-2xl">
+                <input type="text" name="messageInp" id="messageInp" class="flex-1 border border-gray-400 rounded px-3 py-2 mr-2 focus:outline-none"
+                    placeholder="Type a message...">
+                <button type="submit" class="bg-white border border-gray-400 rounded px-4 py-2 hover:bg-gray-100">Send</button>
+            </div>
+        </form>
+
+
+    <!-- Optional: Google Fonts for handwriting style -->
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        .font-handwriting {
+            font-family: 'Indie Flower', cursive;
+        }
+    </style>
+</body>
+
+</html>
