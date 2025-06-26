@@ -1,5 +1,9 @@
 // import module is socket.io for Node.js
 // This code sets up a simple chat server using Socket.IO
+const express = require('express');
+const app = express();
+const http = require('http').createServer(app);
+
 const io = require('socket.io')(8000, {
 // why cross-origin resource sharing (CORS) is needed
     // CORS is needed to allow the client-side application running on a different port (e.g., 5500) to connect to the Socket.IO server running on port 8000.
@@ -36,3 +40,7 @@ io.on('connection', socket => {
     });
 });
 
+const PORT = process.env.PORT || 8000;
+http.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
