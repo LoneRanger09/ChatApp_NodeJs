@@ -1,5 +1,5 @@
 // ensure that the server is running on port 8000
-const socket = io('http://localhost:10000');
+const socket = io();
 
 // Ensure that the HTML elements are correctly linked
 // This code handles the client-side logic for a chat application using Socket.IO
